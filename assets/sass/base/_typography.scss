@@ -66,7 +66,8 @@ a {
     -o-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
     font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
 
-    @include baseline($fontsize: zeta, $font: $bodytype, $lineheight: 2, $below: 2, $breakpoint: all);
+    // @include baseline($fontsize: zeta, $font: $bodytype, $lineheight: 2, $below: 2, $breakpoint: all);
+    @include baseline($fontsize: zeta, $font: $bodytype, $lineheight: 2, $below: 0, $breakpoint: all);
   }
 
   // Headings. OpenType ligatures, discretionary ligatures and lining figures enabled if available.
@@ -85,17 +86,20 @@ a {
 
   // Heading level 1.
   h1, .alpha {
-    @include sassline($fontsize: alpha, $font: $headingtype, $lineheight: 3, $below: 1, $breakpoint: all);
+    // @include sassline($fontsize: alpha, $font: $headingtype, $lineheight: 3, $below: 1, $breakpoint: all);
+    @include sassline($fontsize: alpha, $font: $headingtype, $lineheight: 3, $below: 0, $breakpoint: all);
   }
 
   // Heading level 2.
   h2, .beta {
-    @include sassline(beta, $headingtype, 3, 1, all);
+    // @include sassline(beta, $headingtype, 3, 1, all);
+    @include sassline(beta, $headingtype, 3, 0, all);
   }
 
   // Heading level 3.
   h3, .gamma {
-    @include sassline(gamma, $headingtype, 3, 1, all);
+    // @include sassline(gamma, $headingtype, 3, 1, all);
+    @include sassline(gamma, $headingtype, 3, 0, all);
   }
 
   // Heading level 4.
@@ -115,7 +119,8 @@ a {
 
   // Lists.
   ul, ol {
-    @include baseline(zeta, $bodytype, 2, 2, all);
+    // @include baseline(zeta, $bodytype, 2, 2, all);
+    @include baseline(zeta, $bodytype, 2, 0, all);
 
     li {
       -webkit-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
@@ -158,7 +163,8 @@ a {
   .caption {
     color: $captionColour;
 
-    @include baseline(theta, $headingtype, 2, 2, all);
+    // @include baseline(theta, $headingtype, 2, 2, all);
+    @include baseline(theta, $headingtype, 2, 0, all);
   }
 
   // Nice spacing for captions.
